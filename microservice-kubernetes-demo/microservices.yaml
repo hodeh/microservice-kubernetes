@@ -128,9 +128,9 @@ spec:
     targetPort: 80
   selector:
     run: apache
-  type: LoadBalancer
+  type: NodePort
 status:
-  loadBalancer: {}
+  
 
 ---
 
@@ -148,9 +148,9 @@ spec:
     targetPort: 8080
   selector:
     run: catalog
-  type: LoadBalancer
+  type: NodePort
 status:
-  loadBalancer: {}
+  
 
 ---
 
@@ -168,9 +168,9 @@ spec:
     targetPort: 8080
   selector:
     run: customer
-  type: LoadBalancer
+  type: NodePort
 status:
-  loadBalancer: {}
+  
 
 ---
 
@@ -188,6 +188,6 @@ spec:
     targetPort: 8080
   selector:
     run: order
-  type: LoadBalancer
+  type: NodePort
 status:
-  loadBalancer: {}
+  

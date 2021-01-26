@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.boot.web.server.LocalServerPort;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -38,7 +39,7 @@ public class CatalogWebIntegrationTest {
 
 	@Before
 	public void setup() {
-		iPodNano = itemRepository.findByName("iPod nano").get(0);
+		iPodNano = itemRepository.findByName("iPod nano",Sort.unsorted()).get(0);
 		restTemplate = new RestTemplate();
 	}
 

@@ -8,6 +8,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
+import org.springframework.data.domain.Sort;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -22,9 +23,9 @@ public class RepositoryTest {
 	@Test
 	public void AreAllIPodReturned() {
 
-		assertThat(itemRepository.findByNameContaining("iPod"), hasSize(3));
+		assertThat(itemRepository.findByNameContaining("iPod",Sort.unsorted()), hasSize(3));
 		assertTrue(
-				itemRepository.findByNameContaining("iPod").stream().anyMatch(s -> s.getName().equals("iPod touch")));
+				itemRepository.findByNameContaining("iPod",Sort.unsorted()).stream().anyMatch(s -> s.getName().equals("iPod touch")));
 
 	}
 }
