@@ -59,7 +59,7 @@ public class CatalogController {
 	@RequestMapping(value = "/searchByName.html", produces = MediaType.TEXT_HTML_VALUE)
 	public ModelAndView search(@RequestParam("query") String query) {
 		return new ModelAndView("itemlist", "items",
-				itemRepository.findByNameContaining(query,Sort.by("name")));
+				itemRepository.findByNameContaining(query,Sort.by("price")));
 	}
 
 	@RequestMapping(value = "/{id}.html", method = RequestMethod.DELETE)
