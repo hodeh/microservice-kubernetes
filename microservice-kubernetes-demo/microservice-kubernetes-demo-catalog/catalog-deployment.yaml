@@ -24,7 +24,7 @@ spec:
         run: catalog
     spec:
       containers:
-      - image: docker.io/hodeh/microservice-kubernetes-demo-catalog:${BUILD_NUMBER}
+      - image: docker.io/hodeh/microservice-kubernetes-demo-catalog:BUILD_NUMBER
         imagePullPolicy: Always
         name: catalog
         ports:
