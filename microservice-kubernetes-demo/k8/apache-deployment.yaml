@@ -25,7 +25,7 @@ spec:
         run: apache
     spec:
       containers:
-      - image: docker.io/hodeh/microservice-kubernetes-demo-apache:latest
+      - image: docker.io/hodeh/microservice-kubernetes-demo-apache:${BUILD_NUMBER}
         imagePullPolicy: Always
         name: apache
         ports:

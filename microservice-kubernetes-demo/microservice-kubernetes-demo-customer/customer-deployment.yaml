@@ -24,7 +24,7 @@ spec:
         run: customer
     spec:
       containers:
-      - image: docker.io/hodeh/microservice-kubernetes-demo-customer:latest
+      - image: docker.io/hodeh/microservice-kubernetes-demo-customer:${BUILD_NUMBER}
         imagePullPolicy: Always
         name: customer
         ports:

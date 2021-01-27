@@ -24,7 +24,7 @@ spec:
         run: order
     spec:
       containers:
-      - image: docker.io/hodeh/microservice-kubernetes-demo-order:latest
+      - image: docker.io/hodeh/microservice-kubernetes-demo-order:${BUILD_NUMBER}
         imagePullPolicy: Always
         name: order
         ports:
